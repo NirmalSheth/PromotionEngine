@@ -17,6 +17,7 @@ namespace PromotionEngineDemo
             var service = _serviceProvider.GetService<IProductService>();
             var getproductList= service.PlaceProductOrder();
             var getTotalPrice= service.GetTotalPrice(getproductList);
+            //calculate total price
             Console.WriteLine($"Total Price is:-{getTotalPrice}");
             DisposeServices();
             Console.ReadLine();
