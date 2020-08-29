@@ -16,6 +16,10 @@ namespace PromotionEngineOrchestration.Concrete
             _promotion = promotion;
             _combinePromotion = combinePromotion;
         }
+        /// <summary>
+        /// Give input for product
+        /// </summary>
+        /// <returns></returns>
         public List<Product> PlaceProductOrder()
         {
             var products = new List<Product>();
@@ -45,7 +49,11 @@ namespace PromotionEngineOrchestration.Concrete
             }          
             return products;
         }
-
+        /// <summary>
+        /// Get total Price for all product
+        /// </summary>
+        /// <param name="products"></param>
+        /// <returns></returns>
         public decimal GetTotalPrice(List<Product> products)
         {
             if (products?.Count == 0)
