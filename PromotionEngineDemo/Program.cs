@@ -15,6 +15,7 @@ namespace PromotionEngineDemo
             RegisterServices();
           
             var service = _serviceProvider.GetService<IProductService>();
+            //place a product order
             var getproductList= service.PlaceProductOrder();
             var getTotalPrice= service.GetTotalPrice(getproductList);
             //calculate total price
